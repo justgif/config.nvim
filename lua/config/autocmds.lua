@@ -9,7 +9,7 @@ autocmd('TextYankPost', {
     desc = 'Highlight when yanking text',
     group = yank_group,
     callback = function()
-	vim.highlight.on_yank()
+        vim.highlight.on_yank()
     end,
 })
 

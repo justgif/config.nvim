@@ -45,8 +45,11 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Set tabs to be 4 spaces
+vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
 
 -- Set Powershell as the default shell
 if vim.fn.has 'win32' == 1 then
