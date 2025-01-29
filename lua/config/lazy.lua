@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    spec = {{ import = "plugins" },},
+    spec = "plugins",
     -- Automatically check for plugin updates
     checker = { enabled = true },
 })
