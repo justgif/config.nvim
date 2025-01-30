@@ -8,5 +8,6 @@ vim.keymap.set('n', '<S-j>', '<C-w>j', { desc = 'Move focus to the lower window'
 vim.keymap.set('n', '<S-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<leader>ec', ':Vex<CR>', { desc = '[E]xplore [C]urrent Directory' })
+vim.keymap.set('n', '<leader>en', ':Vex $MYVIMRC/..<CR>', { desc = '[E]xplore [N]eovim Directory' })
 vim.keymap.set('n', '<leader>ew', ':Vex .<CR>', { desc = '[E]xplore [W]orking Directory' })
 
