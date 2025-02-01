@@ -3,9 +3,20 @@ return {
     branch = '0.1.x',
     dependencies = {
         'nvim-lua/plenary.nvim',
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'make',
+            -- Determine whether this plugin should be installed and loaded
+            cond = function()
+                return vim.fn.executable 'make' == 1
+            end
+        },
         'nvim-telescope/telescope-ui-select.nvim',
         'debugloop/telescope-undo.nvim',
-        { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+        {
+            'nvim-tree/nvim-web-devicons',
+            enabled = vim.g.have_nerd_font
+        },
     },
     config = function()
         require('telescope').setup {
@@ -13,12 +24,11 @@ return {
                 ['ui-select'] = {
                     require('telescope.themes').get_dropdown(),
                 },
-                undo = {
-
-                },
+                undo = {},
             },
         }
 
+        pcall(require('telescope').load_extension, 'fzf')
         pcall(require('telescope').load_extension, 'ui-select')
         pcall(require('telescope').load_extension, 'undo')
 
