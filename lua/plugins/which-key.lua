@@ -3,11 +3,10 @@ return {
     opts = {
         delay = 0,
         spec = {
-            { '<leader>e', group = '[E]xplore' },
-            { '<leader>h', group = '[H]arpoon' },
+            { '<leader>e',  group = '[E]xplore' },
+            { '<leader>h',  group = '[H]arpoon' },
             { '<leader>hr', group = '[H]arpoon [R]eplace' },
-            { '<leader>s', group = '[S]earch' },
+            { '<leader>s',  group = '[S]earch' },
         },
     },
 }
-

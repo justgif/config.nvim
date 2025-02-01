@@ -21,12 +21,11 @@ return {
             end,
             -- Some languages depend on vim's regex highlighting system for indent rules
             -- If there are weird indenting issues, add it here and to the indent disable list
-            additional_vim_regex_highlighting = { }
+            additional_vim_regex_highlighting = {}
         },
         indent = {
             enable = true,
-            disable = { }
+            disable = {}
         },
     }
 }
-

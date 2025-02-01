@@ -4,4 +4,3 @@ vim.g.maplocalleader = ' '
 
 -- Enable Nerd Font
 vim.g.have_nerd_font = true
-
