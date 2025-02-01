@@ -30,6 +30,9 @@ vim.opt.signcolumn = 'yes'
 -- Decrease update time
 vim.opt.updatetime = 500
 
+-- Disable keymap sequence timeout
+vim.opt.timeout = false
+
 -- Configure split preference
 vim.opt.splitright = true
 vim.opt.splitbelow = true
