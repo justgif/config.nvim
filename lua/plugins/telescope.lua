@@ -4,6 +4,7 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-ui-select.nvim',
+        'debugloop/telescope-undo.nvim',
         { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
@@ -12,10 +13,16 @@ return {
                 ['ui-select'] = {
                     require('telescope.themes').get_dropdown(),
                 },
+                undo = {
+
+                },
             },
         }
 
         pcall(require('telescope').load_extension, 'ui-select')
+        pcall(require('telescope').load_extension, 'undo')
+
+        vim.keymap.set('n', '<leader>u', '<cmd>Telescope undo<cr>', { desc = 'Telescope [U]ndo' })
 
         local builtin = require 'telescope.builtin'
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
@@ -34,7 +41,7 @@ return {
                 winblend = 10,
                 previewer = false,
             })
-        end, { desc = '[/] Fuzzily search in current buffer' })
+        end, { desc = '[/] Fuzzy search current buffer' })
 
         vim.keymap.set('n', '<leader>s/', function()
             builtin.live_grep {
