@@ -2,16 +2,16 @@
 
 ## Table of Contents
 
-> 1. [Keymaps](#keymaps)
-> 2. [Plugins](#plugins)
+> 1. [Keymaps](#1-keymaps)
+> 2. [Plugins](#2-plugins)
 
-## Keymaps
+## 1. Keymaps
 
 All keymaps are assumed to be in normal mode unless otherwise stated.
 
 `<leader> = ' '`
 
-### Custom
+### 1.1 Custom
 
 | Map | Function |
 |-|-|
@@ -31,9 +31,9 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>rwg` | [R]eplace [W]ord ([G]lobally) |
 | `<leader>rwc` | [R]eplace [W]ord (With [C]onfirmation) |
 
-### Plugins
+### 1.2 Plugins
 
-#### Harpoon
+#### 1.2.1 Harpoon
 
 | Map | Function |
 |-|-|
@@ -50,7 +50,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<Alt>3` | Select Slot [3] |
 | `<Alt>4` | Select Slot [4] |
 
-#### LSP
+#### 1.2.2 LSP
 
 | Map | Function |
 |-|-|
@@ -66,7 +66,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>th` | [T]oggle [I]nlay [H]ints |
 | `<leader>f` | [F]ormat Buffer |
 
-#### Telescope
+#### 1.2.3 Telescope
 
 | Map | Function |
 |-|-|
@@ -85,7 +85,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>/` | Fuzzy Search Current Buffer |
 | `<leader><leader>` | Find Current Open Buffers |
 
-#### Which-Key
+#### 1.2.4 Which-Key
 
 | Map | Function |
 |-|-|
@@ -93,12 +93,13 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 
 [Back to Top](#neovim-configuration)
 
-## Plugins
+## 2. Plugins
 
-### Functional
+### 2.1 Functional
 
 | Name | Description |
 |-|-|
+| [blink](https://github.com/Saghen/blink.cmp) | LSP Completion |
 | [fugitive](https://github.com/tpope/vim-fugitive) | Improved git commands |
 | [harpoon](https://github.com/ThePrimeagen/harpoon) | The fastest way to switch between files |
 | [lazy](https://github.com/folke/lazy.nvim) | Plugin manager |
@@ -112,13 +113,14 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | FZF sorter for telescope |
 | [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Provides a tree-sitter interface in Neovim |
 
-### Visual
+### 2.2 Visual
 
 | Name | Description |
 |-|-|
 | [fidget](https://github.com/j-hui/fidget.nvim) | Notifications and LSP progress |
 | [gitsigns](https://github.com/lewis6991/gitsigns.nvim) | Git decorations for buffers |
 | [kanagawa](https://github.com/rebelot/kanagawa.nvim) | Theme |
+| [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Visualize Markdown files inside Neovim |
 | [telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim) | Sets ui select to use telescope |
 | [telescope-undo](https://github.com/debugloop/telescope-undo.nvim) | Visualize and search undo trees with telescope |
 | [todo-comments](https://github.com/folke/todo-comments.nvim) | Highlight and search todo comments |
