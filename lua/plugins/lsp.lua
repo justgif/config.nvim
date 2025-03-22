@@ -5,11 +5,14 @@ return {
             { 'williamboman/mason.nvim',           opts = {} },
             { 'williamboman/mason-lspconfig.nvim', opts = {} },
             'WhoIsSethDaniel/mason-tool-installer.nvim',
-            { 'j-hui/fidget.nvim', opts = {} }
+            { 'j-hui/fidget.nvim', opts = {} },
+            'saghen/blink.cmp'
         },
         config = function()
-            require('lspconfig').clangd.setup {}
-            require('lspconfig').lua_ls.setup {}
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
+            require('lspconfig').clangd.setup { capabilities = capabilities }
+            require('lspconfig').lua_ls.setup { capabilities = capabilities }
+            require('lspconfig').marksman.setup { capabilities = capabilities }
 
             local autocmd = vim.api.nvim_create_autocmd
             local augroup = vim.api.nvim_create_augroup
