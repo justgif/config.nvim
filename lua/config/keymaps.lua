@@ -1,12 +1,28 @@
-vim.keymap.set('n', '<leader><CR>', ':source $MYVIMRC<CR>', { desc = 'Source vimrc' })
+-- Set <space> as the leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
+local map = vim.keymap.set
 
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
+map('n', '<leader><CR>', ':source $MYVIMRC<CR>', { desc = 'Source $MYVIMRC' })
 
-vim.keymap.set('n', '<leader>ec', ':Vex<CR>', { desc = '[E]xplore [C]urrent Directory' })
-vim.keymap.set('n', '<leader>en', ':Vex $MYVIMRC/..<CR>', { desc = '[E]xplore [N]eovim Directory' })
-vim.keymap.set('n', '<leader>ew', ':Vex .<CR>', { desc = '[E]xplore [W]orking Directory' })
+map('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear Search Highlights' })
+
+map('n', '<C-h>', '<C-w>h', { desc = 'Focus Left Window' })
+map('n', '<C-j>', '<C-w>j', { desc = 'Focus Lower Window' })
+map('n', '<C-k>', '<C-w>k', { desc = 'Focus Upper Window' })
+map('n', '<C-l>', '<C-w>l', { desc = 'Focus Right Window' })
+
+map('i', '<C-h>', '<Left>', { desc = 'Move Cursor Left' })
+map('i', '<C-j>', '<Down>', { desc = 'Move Cursor Down' })
+map('i', '<C-k>', '<Up>', { desc = 'Move Cursor Up' })
+map('i', '<C-l>', '<Right>', { desc = 'Move Cursor Right' })
+
+map('n', '<leader>ec', ':Ex<CR>', { desc = '[E]xplore [C]urrent Directory' })
+map('n', '<leader>en', ':Ex $MYVIMRC/..<CR>', { desc = '[E]xplore [N]eovim Directory' })
+map('n', '<leader>ew', ':Ex .<CR>', { desc = '[E]xplore [W]orking Directory' })
+
+map('n', '<leader>rwg', [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = '[R]eplace [W]ord ([G]lobal)' })
+map('n', '<leader>rwc', [[:%s/\<<C-r><C-w>\>//c<Left><Left>]], { desc = '[R]eplace [W]ord ([C]onfirm)' })
+
+-- TODO: Add Visual mode [R]eplace [S]tring variant for currently highlighted string

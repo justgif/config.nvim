@@ -2,12 +2,13 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = {
-            { 'williamboman/mason.nvim', opts = {} },
-            'williamboman/mason-lspconfig.nvim',
+            { 'williamboman/mason.nvim',           opts = {} },
+            { 'williamboman/mason-lspconfig.nvim', opts = {} },
             'WhoIsSethDaniel/mason-tool-installer.nvim',
-            { 'j-hui/fidget.nvim',       opts = {} }
+            { 'j-hui/fidget.nvim', opts = {} }
         },
         config = function()
+            require('lspconfig').clangd.setup {}
             require('lspconfig').lua_ls.setup {}
 
             local autocmd = vim.api.nvim_create_autocmd

@@ -1,3 +1,10 @@
+require('config.keymaps')
+require('config.autocmds')
+require('config.lazy')
+
+-- Enable Nerd Font
+vim.g.have_nerd_font = true
+
 -- Show line numbers relative to cursor
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -50,7 +57,7 @@ vim.opt.cursorline = true
 -- Minimum number of lines to show above and below the cursor
 vim.opt.scrolloff = 10
 
--- Set tabs to be 4 spaces
+-- Set tabs to 4 spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
