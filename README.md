@@ -28,12 +28,17 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>ec` | [E]xplore [C]urrent Directory |
 | `<leader>en` | [E]xplore [N]eovim Directory |
 | `<leader>ew` | [E]xplore [W]orking Directory |
-| `<leader>rwg` | [R]eplace [W]ord ([G]lobally) |
-| `<leader>rwc` | [R]eplace [W]ord (With [C]onfirmation) |
+| `<leader>rw` | [R]eplace [W]ord |
 
-### 1.2 Plugins
+### 1.2 File Types
 
-#### 1.2.1 Harpoon
+| Map | Extension | Function |
+|-|-|-|
+| `<leader>mt` | `.md` | [M]arkdown [T]oggle Preview |
+
+### 1.3 Plugins
+
+#### 1.3.1 Harpoon
 
 | Map | Function |
 |-|-|
@@ -50,7 +55,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<Alt>3` | Select Slot [3] |
 | `<Alt>4` | Select Slot [4] |
 
-#### 1.2.2 LSP
+#### 1.3.2 LSP
 
 | Map | Function |
 |-|-|
@@ -66,7 +71,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>th` | [T]oggle [I]nlay [H]ints |
 | `<leader>f` | [F]ormat Buffer |
 
-#### 1.2.3 Telescope
+#### 1.3.3 Telescope
 
 | Map | Function |
 |-|-|
@@ -85,7 +90,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>/` | Fuzzy Search Current Buffer |
 | `<leader><leader>` | Find Current Open Buffers |
 
-#### 1.2.4 Which-Key
+#### 1.3.4 Which Key
 
 | Map | Function |
 |-|-|

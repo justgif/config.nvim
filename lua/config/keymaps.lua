@@ -22,7 +22,4 @@ map('n', '<leader>ec', ':Ex<CR>', { desc = '[E]xplore [C]urrent Directory' })
 map('n', '<leader>en', ':Ex $MYVIMRC/..<CR>', { desc = '[E]xplore [N]eovim Directory' })
 map('n', '<leader>ew', ':Ex .<CR>', { desc = '[E]xplore [W]orking Directory' })
 
-map('n', '<leader>rwg', [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = '[R]eplace [W]ord ([G]lobal)' })
-map('n', '<leader>rwc', [[:%s/\<<C-r><C-w>\>//c<Left><Left>]], { desc = '[R]eplace [W]ord ([C]onfirm)' })
-
--- TODO: Add Visual mode [R]eplace [S]tring variant for currently highlighted string
+map('n', '<leader>rw', ':%s/<C-r><C-w>//gc<Left><Left><Left>', { desc = '[R]eplace [W]ord' })
