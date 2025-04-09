@@ -13,49 +13,44 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 
 ### 1.1 Custom
 
+#### 1.1.1 Navigation
+
+| Map | Function |
+|-|-|
+| `<Ctrl> + h/j/k/l` | Focus Left/Lower/Upper/Right Window |
+| `<Ctrl> + h/j/k/l` | Move Cursor Left/Down/Up/Right (Insert Mode) |
+| `<leader>ec` | [E]xplore [C]urrent Directory |
+| `<leader>en` | [E]xplore [N]eovim Directory |
+| `<leader>ew` | [E]xplore [W]orking Directory |
+
+#### 1.1.2 File Types
+
+| Map | Extension | Function |
+|-|-|-|
+| `<leader>tm` | `.md` | [T]oggle [M]arkdown Preview |
+
+#### 1.1.3 Misc
+
 | Map | Function |
 |-|-|
 | `<leader><Enter>` | Source $MYVIMRC |
 | `<Esc>` | Clear Search Highlights |
-| `<Ctrl>h` | Focus Left Window |
-| `<Ctrl>l` | Focus Right Window |
-| `<Ctrl>j` | Focus Lower Window |
-| `<Ctrl>k` | Focus Upper Window |
-| `<Ctrl>h` | Move Cursor Left (Insert Mode) |
-| `<Ctrl>l` | Move Cursor Right (Insert Mode) |
-| `<Ctrl>j` | Move Cursor Down (Insert Mode) |
-| `<Ctrl>k` | Move Cursor Up (Insert Mode) |
-| `<leader>ec` | [E]xplore [C]urrent Directory |
-| `<leader>en` | [E]xplore [N]eovim Directory |
-| `<leader>ew` | [E]xplore [W]orking Directory |
 | `<leader>rw` | [R]eplace [W]ord |
 
-### 1.2 File Types
+### 1.2 Plugins
 
-| Map | Extension | Function |
-|-|-|-|
-| `<leader>mt` | `.md` | [M]arkdown [T]oggle Preview |
-
-### 1.3 Plugins
-
-#### 1.3.1 Harpoon
+#### 1.2.1 Harpoon
 
 | Map | Function |
 |-|-|
 | `<leader>hp` | [H]arpoon [P]repend Current File |
 | `<leader>ha` | [H]arpoon [A]ppend Current File |
 | `<leader>hd` | [H]arpoon [D]elete Current File |
-| `<leader>hl` | [H]arpoon [L]ist |
-| `<leader>hr1` | [H]arpoon [R]eplace Slot [1] |
-| `<leader>hr2` | [H]arpoon [R]eplace Slot [2] |
-| `<leader>hr3` | [H]arpoon [R]eplace Slot [3] |
-| `<leader>hr4` | [H]arpoon [R]eplace Slot [4] |
-| `<Alt>1` | Select Slot [1] |
-| `<Alt>2` | Select Slot [2] |
-| `<Alt>3` | Select Slot [3] |
-| `<Alt>4` | Select Slot [4] |
+| `<leader>hl` | [H]arpoon [L]ist Slots |
+| `<leader>hr + 1/2/3/4` | [H]arpoon [R]eplace Slot [1/2/3/4] |
+| `<Alt> + 1/2/3/4` | Select Slot [1/2/3/4] |
 
-#### 1.3.2 LSP
+#### 1.2.2 LSP
 
 | Map | Function |
 |-|-|
@@ -68,10 +63,10 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>ws` | [W]orkspace [S]ymbols |
 | `<leader>rn` | [R]e[n]ame |
 | `<leader>ca` | [C]ode [A]ction |
-| `<leader>th` | [T]oggle [I]nlay [H]ints |
+| `<leader>th` | [T]oggle Inlay [H]ints |
 | `<leader>f` | [F]ormat Buffer |
 
-#### 1.3.3 Telescope
+#### 1.2.3 Telescope
 
 | Map | Function |
 |-|-|
@@ -90,11 +85,11 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>/` | Fuzzy Search Current Buffer |
 | `<leader><leader>` | Find Current Open Buffers |
 
-#### 1.3.4 Which Key
+#### 1.2.4 Which Key
 
 | Map | Function |
 |-|-|
-| `<leader>?` | Show Currently Available Keymaps |
+| `<leader>?` | Show Current Buffer Keymaps |
 
 [Back to Top](#neovim-configuration)
 
@@ -106,7 +101,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 |-|-|
 | [blink](https://github.com/Saghen/blink.cmp) | LSP Completion |
 | [fugitive](https://github.com/tpope/vim-fugitive) | Improved git commands |
-| [harpoon](https://github.com/ThePrimeagen/harpoon) | The fastest way to switch between files |
+| [harpoon](https://github.com/ThePrimeagen/harpoon) | Quickly switch between files |
 | [lazy](https://github.com/folke/lazy.nvim) | Plugin manager |
 | [lazydev](https://github.com/folke/lazydev.nvim) | Configures LuaLS for Neovim |
 | [lspconfig](https://github.com/neovim/nvim-lspconfig) | Provides LSP client configurations |
@@ -116,7 +111,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | [mini](https://github.com/echasnovski/mini.nvim) | Collection of several modules |
 | [telescope](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | FZF sorter for telescope |
-| [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Provides a tree-sitter interface in Neovim |
+| [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Tree-sitter interface in Neovim |
 
 ### 2.2 Visual
 

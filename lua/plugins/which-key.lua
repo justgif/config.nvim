@@ -9,6 +9,7 @@ return {
             { '<leader>h',  group = '[H]arpoon' },
             { '<leader>hr', group = '[H]arpoon [R]eplace' },
             { '<leader>s',  group = '[S]earch' },
+            { '<leader>t',  group = '[T]oggle' },
         },
     },
     keys = {

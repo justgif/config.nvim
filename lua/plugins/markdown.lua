@@ -7,8 +7,8 @@ return {
         vim.api.nvim_create_autocmd('FileType', {
             pattern = { 'markdown' },
             callback = function(event)
-                vim.keymap.set('n', '<leader>mt', ':RenderMarkdown buf_toggle<CR>',
-                    { buffer = event.buf, desc = '[M]arkdown [T]oggle Preview' })
+                vim.keymap.set('n', '<leader>tm', ':RenderMarkdown buf_toggle<CR>',
+                    { buffer = event.buf, desc = '[T]oggle [M]arkdown Preview' })
             end
         })
     end
