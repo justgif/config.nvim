@@ -1,4 +1,4 @@
-# [Neovim](https://github.com/neovim/neovim) Configuration
+# Personal Neovim Config
 
 ## Table of Contents
 
@@ -7,6 +7,10 @@
 > 3. [Plugins](#3-plugins)
 
 ## 1. Installation
+
+### Dependencies
+
+- [Neovim](https://github.com/neovim/neovim) v0.10+
 
 ### Clone repository to Neovim config directory
 
