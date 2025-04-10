@@ -2,34 +2,66 @@
 
 ## Table of Contents
 
-> 1. [Keymaps](#1-keymaps)
-> 2. [Plugins](#2-plugins)
+> 1. [Installation](#1-installation)
+> 2. [Keymaps](#2-keymaps)
+> 3. [Plugins](#3-plugins)
 
-## 1. Keymaps
+## 1. Installation
+
+### Clone repository to Neovim config directory
+
+<details>
+<summary>Linux/Mac</summary>
+
+```
+git clone https://github.com/justgif/config.nvim.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
+```
+
+</details>
+
+<details>
+<summary>Windows</summary>
+
+Powershell:
+```
+git clone https://github.com/justgif/config.nvim.git $env:LocalAppData\nvim
+```
+
+Command Prompt:
+```
+git clone https://github.com/justgif/config.nvim.git %LocalAppData%\nvim
+```
+
+</details>
+
+### Run Neovim in terminal
+
+```
+nvim
+```
+
+## 2. Keymaps
 
 All keymaps are assumed to be in normal mode unless otherwise stated.
 
+Keymap descriptions surround the the first letters of corresponding words in [] brackets where possible to help remember the keymap. This is also reflected in Neovim with the Which Key plugin.
+
+Some keymaps may have multiple options, which are formatted as `(X/Y/Z)`. For example, a keymap that looks like `<leader>a(1/2/3)` can be interpretted as the following 3 separate keymaps `<leader>a1`, `<leader>a2`, `<leader>a3`.
+
 `<leader> = ' '`
 
-### 1.1 Custom
+### 2.1 Custom
 
-#### 1.1.1 Navigation
+#### Navigation
 
 | Map | Function |
 |-|-|
-| `<Ctrl> + h/j/k/l` | Focus Left/Lower/Upper/Right Window |
-| `<Ctrl> + h/j/k/l` | Move Cursor Left/Down/Up/Right (Insert Mode) |
+| `<Ctrl>(h/j/k/l)` | Focus Left/Lower/Upper/Right Window |
 | `<leader>ec` | [E]xplore [C]urrent Directory |
 | `<leader>en` | [E]xplore [N]eovim Directory |
 | `<leader>ew` | [E]xplore [W]orking Directory |
 
-#### 1.1.2 File Types
-
-| Map | Extension | Function |
-|-|-|-|
-| `<leader>tm` | `.md` | [T]oggle [M]arkdown Preview |
-
-#### 1.1.3 Misc
+#### Misc
 
 | Map | Function |
 |-|-|
@@ -37,9 +69,9 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<Esc>` | Clear Search Highlights |
 | `<leader>rw` | [R]eplace [W]ord |
 
-### 1.2 Plugins
+### 2.2 Plugins
 
-#### 1.2.1 Harpoon
+#### Harpoon
 
 | Map | Function |
 |-|-|
@@ -47,10 +79,10 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>ha` | [H]arpoon [A]ppend Current File |
 | `<leader>hd` | [H]arpoon [D]elete Current File |
 | `<leader>hl` | [H]arpoon [L]ist Slots |
-| `<leader>hr + 1/2/3/4` | [H]arpoon [R]eplace Slot [1/2/3/4] |
-| `<Alt> + 1/2/3/4` | Select Slot [1/2/3/4] |
+| `<leader>hr(1/2/3/4)` | [H]arpoon [R]eplace Slot [1/2/3/4] |
+| `<Alt>(1/2/3/4)` | Select Slot [1/2/3/4] |
 
-#### 1.2.2 LSP
+#### LSP
 
 | Map | Function |
 |-|-|
@@ -66,7 +98,13 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>th` | [T]oggle Inlay [H]ints |
 | `<leader>f` | [F]ormat Buffer |
 
-#### 1.2.3 Telescope
+#### Render Markdown
+
+| Map | Function |
+|-|-|
+| `<leader>tm` | [T]oggle [M]arkdown Preview |
+
+#### Telescope
 
 | Map | Function |
 |-|-|
@@ -85,7 +123,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | `<leader>/` | Fuzzy Search Current Buffer |
 | `<leader><leader>` | Find Current Open Buffers |
 
-#### 1.2.4 Which Key
+#### Which Key
 
 | Map | Function |
 |-|-|
@@ -93,9 +131,9 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 
 [Back to Top](#neovim-configuration)
 
-## 2. Plugins
+## 3. Plugins
 
-### 2.1 Functional
+### 3.1 Functional
 
 | Name | Description |
 |-|-|
@@ -113,7 +151,7 @@ All keymaps are assumed to be in normal mode unless otherwise stated.
 | [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | FZF sorter for telescope |
 | [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Tree-sitter interface in Neovim |
 
-### 2.2 Visual
+### 3.2 Visual
 
 | Name | Description |
 |-|-|

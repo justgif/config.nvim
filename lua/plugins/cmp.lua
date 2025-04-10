@@ -3,7 +3,7 @@ return {
     dependencies = { 'rafamadriz/friendly-snippets' },
     version = 'v0.*',
     opts = {
-        keymap = { preset = 'enter' },
+        keymap = { preset = 'default' },
         appearance = {
             nerd_font_variant = 'mono'
         },

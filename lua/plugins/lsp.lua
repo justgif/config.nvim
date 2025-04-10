@@ -2,17 +2,39 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = {
-            { 'williamboman/mason.nvim',           opts = {} },
-            { 'williamboman/mason-lspconfig.nvim', opts = {} },
+            { 'williamboman/mason.nvim', opts = {} },
+            'williamboman/mason-lspconfig.nvim',
             'WhoIsSethDaniel/mason-tool-installer.nvim',
-            { 'j-hui/fidget.nvim', opts = {} },
+            { 'j-hui/fidget.nvim',       opts = {} },
             'saghen/blink.cmp'
         },
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
-            require('lspconfig').clangd.setup { capabilities = capabilities }
-            require('lspconfig').lua_ls.setup { capabilities = capabilities }
-            require('lspconfig').marksman.setup { capabilities = capabilities }
+
+            -- Add language servers here to automatically install them
+            local servers = {
+                clangd = {},
+                lua_ls = {},
+                marksman = {},
+            }
+
+            local ensure_installed = vim.tbl_keys(servers or {})
+            vim.list_extend(ensure_installed, {
+                'stylua', -- Formats Lua code
+            })
+            require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+            require('mason-lspconfig').setup {
+                ensure_installed = {},
+                automatic_installation = false,
+                handlers = {
+                    function(server_name)
+                        local server = servers[server_name] or {}
+                        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+                        require('lspconfig')[server_name].setup(server)
+                    end
+                }
+            }
 
             local autocmd = vim.api.nvim_create_autocmd
             local augroup = vim.api.nvim_create_augroup
