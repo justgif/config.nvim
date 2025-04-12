@@ -1,4 +1,4 @@
-# Personal Neovim Config
+# Neovim Config
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ Keymap descriptions surround the the first letters of corresponding words in [] 
 
 Some keymaps may have multiple options, which are formatted as `(X/Y/Z)`. For example, a keymap that looks like `<leader>a(1/2/3)` can be interpretted as the following 3 separate keymaps `<leader>a1`, `<leader>a2`, `<leader>a3`.
 
-`<leader> = ' '`
+By default, `<leader> = <space>`. This can be remapped in `/lua/config/keymaps.lua`.
 
 ### 2.1 Custom
 
@@ -72,6 +72,8 @@ Some keymaps may have multiple options, which are formatted as `(X/Y/Z)`. For ex
 | `<leader><Enter>` | Source $MYVIMRC |
 | `<Esc>` | Clear Search Highlights |
 | `<leader>rw` | [R]eplace [W]ord |
+| `<Esc><Esc>` | Return To Normal Mode (From Terminal Mode) |
+| `<leader>tt` | [T]oggle Floating [T]erminal |
 
 ### 2.2 Plugins
 

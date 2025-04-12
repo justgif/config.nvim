@@ -18,3 +18,5 @@ map('n', '<leader>en', ':Ex $MYVIMRC/..<CR>', { desc = '[E]xplore [N]eovim Direc
 map('n', '<leader>ew', ':Ex .<CR>', { desc = '[E]xplore [W]orking Directory' })
 
 map('n', '<leader>rw', ':%s/<C-r><C-w>//gc<Left><Left><Left>', { desc = '[R]eplace [W]ord' })
+
+map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Terminal Mode To Normal Mode' })

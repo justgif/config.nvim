@@ -1,5 +1,6 @@
 require('config.keymaps')
 require('config.autocmds')
+require('config.terminal')
 require('config.lazy')
 
 -- Enable Nerd Font
