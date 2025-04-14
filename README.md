@@ -44,6 +44,8 @@ git clone https://github.com/justgif/config.nvim.git %LocalAppData%\nvim
 nvim
 ```
 
+[Back to Top](#table-of-contents)
+
 ## 2. Keymaps
 
 All keymaps are assumed to be in normal mode unless otherwise stated.
@@ -135,7 +137,7 @@ By default, `<leader> = <space>`. This can be remapped in `/lua/config/keymaps.l
 |-|-|
 | `<leader>?` | Show Current Buffer Keymaps |
 
-[Back to Top](#neovim-configuration)
+[Back to Top](#table-of-contents)
 
 ## 3. Plugins
 
@@ -172,4 +174,4 @@ By default, `<leader> = <space>`. This can be remapped in `/lua/config/keymaps.l
 | [web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Nerd Font icons for Neovim |
 | [which-key](https://github.com/folke/which-key.nvim) | Show available keymaps as they are typed |
 
-[Back to Top](#neovim-configuration)
+[Back to Top](#table-of-contents)
