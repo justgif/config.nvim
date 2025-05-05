@@ -11,6 +11,8 @@
 ### Dependencies
 
 - [Neovim](https://github.com/neovim/neovim) v0.10+
+- Any of the following C compilers:
+  - `cc`, `gcc`, `clang`, `cl`, `zig`
 
 ### Clone repository to Neovim config directory
 
