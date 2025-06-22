@@ -13,6 +13,7 @@ return {
 
             -- Add language servers here to automatically install them
             local servers = {
+                basedpyright = {},
                 clangd = {},
                 lua_ls = {},
                 marksman = {},
@@ -26,6 +27,7 @@ return {
 
             require('mason-lspconfig').setup {
                 ensure_installed = {},
+                automatic_enable = true,
                 automatic_installation = false,
                 handlers = {
                     function(server_name)

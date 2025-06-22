@@ -10,9 +10,6 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Disable text wrapping
-vim.opt.wrap = false
-
 -- Enable mouse mode
 vim.opt.mouse = 'a'
 
